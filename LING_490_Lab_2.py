@@ -131,7 +131,7 @@ print(text4.dispersion_plot(["citizens", "democracy", "freedom", "duties", "Amer
 # Do 2 of your own searches to examine the lexical dispersion of words in a text.
 
 # Search 1
-print("\nThe lexical dispersion of the words: 'stocks', 'inflation', 'money',and 'America' in text")
+print("\nThe lexical dispersion of the words: 'stocks', 'inflation', 'money',and 'America' in text7")
 print(text7.dispersion_plot(['stocks', 'inflation', 'money', 'America']))
 
 # Search 2
@@ -238,6 +238,7 @@ print('\n',"Number of times 'whale' occured in text1",fdist1["whale"])
 # Plot the frequency distribution of words in a text
 # Pay attention to the curve of the graph. This curve is pretty consistent across texts.
 # For more info look into Ziph's law
+print("The Plot of the frequency distribution of words in a text1.")
 print('\n',fdist1.plot(50, cumulative=True))
 
 # Sometimes the most frequent words don't tell us too much about the text so we can look
@@ -259,6 +260,7 @@ print("\nThe 50 most frequent words and count in text6",fdist2.most_common(50))
 # Plot the frequency distribution of the text
 # NOTE: You need to remove the # sign located to the left of the code below for the code
 # to run
+print("The Plot of the frequency distribution of words in a text6.")
 print('\n',fdist2.plot(50, cumulative=True))
 
 # Find the hapaxes in the text
