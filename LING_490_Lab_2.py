@@ -40,6 +40,7 @@ from __future__ import division
 
 # TASK #1
 # Import the NLTK package and download "all"
+print("______________________________________Task #1_________________________________\n")
 import nltk
 #nltk.download()
 
@@ -56,49 +57,66 @@ print(text2)
 
 # TASK #2
 # Search text by concordances
+print("______________________________________Task #2_________________________________\n")
+print("\nAll the occurance of the word \"monstrous\" in text1")
 print(text1.concordance("monstrous"))
 
 # YOUR TURN
 # Do 2 of your own searches by concordances
 
 # Search 1
-
+print("\nAll the occurance of the word \"Grail\" in text6")
+print(text6.concordance("Grail"))
 
 # Search 2
-
+print("\nAll the occurance of the word \"beginning\" in text3")
+print(text3.concordance("beginning"))
 
 
 # TASK #3
+print("______________________________________Task #3_________________________________\n")
 # Search text for words that appear in a similar range of contexts
+
+print("\nAll the words that occurred in a similar context as the word \"monstrous\" in text1")
 print(text1.similar("monstrous"))
 
+print("\nAll the words that occurred in a similar context as the word \"monstrous\" in text2")
 print(text2.similar("monstrous"))
 
 # YOUR TURN
 # Do 2 of your own searches by similarity
 
 # Search 1
-
+print("\nAll the words that occurred in a similar context as the word \"Grail\" in text6")
+print(text6.similar("Grail"))
 
 # Search 2
+print("\nAll the words that occurred in a similar context as the word \"beginning\" in text3")
+print(text3.similar("beginning"))
 
 
 # TASK #4
+print("______________________________________Task #4_________________________________\n")
 # Search text for contexts that are shared by two or more words, such
 # as "monstrous" and "very"
+print("\nAll the common contexts were 'monstrous' and 'very' appears in text2:")
 print(text2.common_contexts(["monstrous", "very"]))
 
 # YOUR TURN
 # Do 2 of your own searches by common context
 
 # Search 1
-
+print("\nAll the common contexts were 'Grail' and 'Lord' appears in text6:")
+print(text6.common_contexts(["Grail", "Lord"]))
 
 # Search 2
-
+print("\nAll the common contexts were 'beginning' and 'earth' appears in text3:")
+print(text3.common_contexts(["beginning", "earth"]))
 
 # TASK #5
+print("______________________________________Task #5_________________________________\n")
 # Search for the lexical dispersion of a given word or words across a text
+print("\nThe lexical dispersion of the words: 'citizens', 'democracy', 'freedom', 'duties',and 'America' in text4")
 print(text4.dispersion_plot(["citizens", "democracy", "freedom", "duties", "America"]))
 
 # HEADS UP
@@ -113,43 +131,49 @@ print(text4.dispersion_plot(["citizens", "democracy", "freedom", "duties", "Amer
 # Do 2 of your own searches to examine the lexical dispersion of words in a text.
 
 # Search 1
-
+print("\nThe lexical dispersion of the words: 'stocks', 'inflation', 'money',and 'America' in text")
+print(text7.dispersion_plot(['stocks', 'inflation', 'money', 'America']))
 
 # Search 2
+print("\nThe lexical dispersion of the words: 'Marianne', 'love', 'death', 'age',and 'Henry' in text2")
+print(text2.dispersion_plot(["love", "Marianne", "death", "age", "Henry"]))
 
 
 # TASK #6
+print("______________________________________Task #6_________________________________\n")
 # Counting Vocabulary
 # Find the length of a text by total word count + punctuation marks
+
 # This gives us the total TOKENS in a text
-print(len(text3))
+print("\n The length of text3: ",len(text3))
 
 # Print a sorted list of vocabulary items
-print(sorted(set(text3)))
+print("\n The sorted list of vocabulary in text3: ", sorted(set(text3)))
 
 # Find the total word TYPES in a text by using the "set()" function.
-print(len(set(text3)))
+print("\n The total word types in text3: ",len(set(text3)))
 
 # YOUR TURN
 # Do 2 of your own searches to examine the word count in a text.
 
 # Search 1
 # Tokens
-
+print("\n The length of text8: ",len(text8))
 
 # Search 1
 # Types
-
+print("\n The total word types in text8: ",len(set(text8)))
 
 # Search 2
 # Tokens
-
+print("\n The length of text9: ",len(text9))
 
 # Search 2
 # Types
-
+print("\n The total word types in text9: ",len(set(text9)))
 
 # TASK #7
+print("\n______________________________________Task #7_________________________________\n")
 # Lexical richness
 
 # Let's calculate a measure of lexical richness in a text by dividing
@@ -158,10 +182,10 @@ print(len(set(text3)))
 print(len(text3) / len(set(text3)))
 
 # Count the occurrences of a word in a particular text
-print(text3.count("smote"))
+#print(text3.count("smote"))
 
 # Calculate the percentage of a text that is taken up by one word
-print(100 * text4.count("a") / len(text4))
+#print(100 * text4.count("a") / len(text4))
 
 # YOUR TURN
 # Do 2 of your own searches to examine lexical richness.
@@ -176,6 +200,7 @@ print(100 * text4.count("a") / len(text4))
 
 
 # TASK #8
+print("______________________________________Task #8_________________________________\n")
 # Writing our first functions :)
 
 # Write a function to calculate the lexical diversity of a text
@@ -187,34 +212,35 @@ def percentage(count, total):
     return 100 * count / total
 
 # Try your new functions out
-print(lexical_diversity(text3))
+#print(lexical_diversity(text3))
 
-print(percentage(text4.count("a"), len(text4)))
+#print(percentage(text4.count("a"), len(text4)))
 
 
 # TASK #9
+print("______________________________________Task #9_________________________________\n")
 # Frequency distributions
 # Let's count how often each word occurs in a text and rank them by frequency. In other
 # words, let's get its frequency distribution
-fdist1 = FreqDist(text1)
-print(fdist1)
+#fdist1 = FreqDist(text1)
+#print(fdist1)
 
 # Let's get the 50 most frequent words and count how many times each appears in a text
 # NOTE: The textbook uses different code that produced an error for me in this section so
 # I replaced it with code that worked.
-print(fdist1.most_common(50))
+#print(fdist1.most_common(50))
 
 # Count the times a particular word appears in a text
-print(fdist1["whale"])
+#print(fdist1["whale"])
 
 # Plot the frequency distribution of words in a text
 # Pay attention to the curve of the graph. This curve is pretty consistent across texts.
 # For more info look into Ziph's law
-print(fdist1.plot(50, cumulative=True))
+#print(fdist1.plot(50, cumulative=True))
 
 # Sometimes the most frequent words don't tell us too much about the text so we can look
 # at the hapaxes, or words that appear only once in the text
-print(fdist1.hapaxes())
+#print(fdist1.hapaxes())
 
 # YOUR TURN
 # Calculate the frequency distribution of another text in NLTK (e.g. text2, text3, etc.)
@@ -244,6 +270,7 @@ print(fdist1.hapaxes())
 # Sometimes we need to look deeper
 
 # TASK #10
+print("______________________________________Task #10_________________________________\n")
 # Fine grained selection of words
 # Let's look at the length of words to see if that tells us something, starting with the
 # long words
@@ -255,7 +282,7 @@ V = set(text1)
 long_words = [w for w in V if len(w) > 15]
 
 # Now let's look at the set of long_words in text1
-print(sorted(long_words))
+#print(sorted(long_words))
 
 # YOUR TURN
 # Try out the previous statements to evaluate word length and experiment with changing
@@ -267,12 +294,13 @@ print(sorted(long_words))
 
 
 # TASK #11
+print("______________________________________Task #11_________________________________\n")
 # Collocations and Bigrams
 # Let's count bigrams and collocations in text
 # We'll come back to how we find collocations later
-print(text4.collocations())
+#print(text4.collocations())
 
-print(text5.collocations())
+#print(text5.collocations())
 
 # YOUR TURN
 # Use the "collocations" function to search for collocations in other texts.
