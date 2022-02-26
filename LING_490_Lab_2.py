@@ -148,21 +148,21 @@ print("______________________________________Task #6____________________________
 print("\n The length of text3: ",len(text3))
 
 # Print a sorted list of vocabulary items
-print("\n The sorted list of vocabulary in text3: ", sorted(set(text3)))
+print("\nThe sorted list of vocabulary in text3: ", sorted(set(text3)))
 
 # Find the total word TYPES in a text by using the "set()" function.
-print("\n The total word types in text3: ",len(set(text3)))
+print("\nThe total word types in text3: ",len(set(text3)))
 
 # YOUR TURN
 # Do 2 of your own searches to examine the word count in a text.
 
 # Search 1
 # Tokens
-print("\n The length of text8: ",len(text8))
+print("\nThe length of text8: ",len(text8))
 
 # Search 1
 # Types
-print("\n The total word types in text8: ",len(set(text8)))
+print("The total word types in text8: ",len(set(text8)))
 
 # Search 2
 # Tokens
@@ -170,7 +170,7 @@ print("\n The length of text9: ",len(text9))
 
 # Search 2
 # Types
-print("\n The total word types in text9: ",len(set(text9)))
+print("The total word types in text9: ",len(set(text9)))
 
 # TASK #7
 print("\n______________________________________Task #7_________________________________\n")
@@ -179,13 +179,13 @@ print("\n______________________________________Task #7__________________________
 # Let's calculate a measure of lexical richness in a text by dividing
 # the total TOKENS by the total TYPES. This shows the average that each word is used
 # in the text
-print(len(text3) / len(set(text3)))
+print("Lexical richness of text3: ",len(text3) / len(set(text3)))
 
 # Count the occurrences of a word in a particular text
-#print(text3.count("smote"))
+print("Number of occurence of the word 'smote' in text3: ",text3.count("smote"))
 
 # Calculate the percentage of a text that is taken up by one word
-#print(100 * text4.count("a") / len(text4))
+print("The percentage of 'a' found in text4: ",100 * text4.count("a") / len(text4))
 
 # YOUR TURN
 # Do 2 of your own searches to examine lexical richness.
@@ -193,14 +193,16 @@ print(len(text3) / len(set(text3)))
 # Search 1
 # How many times does the word "lol" appear in "text5"? How much is this as a percentage
 # of the total number of words in the text?
-
+print("\nNumber of occurence of the word 'lol' in text5: ",text5.count("lol"))
+print("The percentage of 'lol' found in text5: ",100 * text5.count("lol") / len(text5))
 
 # Search 2
 # Pick a word and text to examine
-
+print("\nNumber of occurence of the word 'Thursaday' in text9: ",text9.count("Thursaday"))
+print("The percentage of 'Thursaday' found in text9: ",100 * text9.count("Thursaday") / len(text9))
 
 # TASK #8
-print("______________________________________Task #8_________________________________\n")
+print("\n______________________________________Task #8_________________________________\n")
 # Writing our first functions :)
 
 # Write a function to calculate the lexical diversity of a text
@@ -212,9 +214,9 @@ def percentage(count, total):
     return 100 * count / total
 
 # Try your new functions out
-#print(lexical_diversity(text3))
+print("Lexical Diversity of text3: ",lexical_diversity(text3),'\n')
 
-#print(percentage(text4.count("a"), len(text4)))
+print("The percentage of 'a' in text4: ",percentage(text4.count("a"), len(text4)),'\n')
 
 
 # TASK #9
@@ -222,55 +224,55 @@ print("______________________________________Task #9____________________________
 # Frequency distributions
 # Let's count how often each word occurs in a text and rank them by frequency. In other
 # words, let's get its frequency distribution
-#fdist1 = FreqDist(text1)
-#print(fdist1)
+fdist1 = FreqDist(text1)
+print('\n',"Frequency distribution of text1: ",fdist1)
 
 # Let's get the 50 most frequent words and count how many times each appears in a text
 # NOTE: The textbook uses different code that produced an error for me in this section so
 # I replaced it with code that worked.
-#print(fdist1.most_common(50))
+print('\n',"The 50 most frequent words and count in text1",fdist1.most_common(50))
 
 # Count the times a particular word appears in a text
-#print(fdist1["whale"])
+print('\n',"Number of times 'whale' occured in text1",fdist1["whale"])
 
 # Plot the frequency distribution of words in a text
 # Pay attention to the curve of the graph. This curve is pretty consistent across texts.
 # For more info look into Ziph's law
-#print(fdist1.plot(50, cumulative=True))
+print('\n',fdist1.plot(50, cumulative=True))
 
 # Sometimes the most frequent words don't tell us too much about the text so we can look
 # at the hapaxes, or words that appear only once in the text
-#print(fdist1.hapaxes())
+print('\n',fdist1.hapaxes())
 
 # YOUR TURN
 # Calculate the frequency distribution of another text in NLTK (e.g. text2, text3, etc.)
 # NOTE: You need to remove the # sign located to the left of the code below for the code
 # to run
-#fdist2 = FreqDist()
-#print(fdist2)
+fdist2 = FreqDist(text6)
+print("\nFrequency distribution of text6: ",fdist2)
 
 # Get the (50) most frequent words from the text
 # NOTE: You need to remove the # sign located to the left of the code below for the code
 # to run
-#print(fdist2.most_common(50))
+print("\nThe 50 most frequent words and count in text6",fdist2.most_common(50))
 
 # Plot the frequency distribution of the text
 # NOTE: You need to remove the # sign located to the left of the code below for the code
 # to run
-#print(fdist2.plot(50, cumulative=True)))
+print('\n',fdist2.plot(50, cumulative=True))
 
 # Find the hapaxes in the text
 # NOTE: You need to remove the # sign located to the left of the code below for the code
 # to run
-#print(fdist2.hapaxes()
+print('\n',fdist2.hapaxes())
 
 # QUESTION
 # Do the most frequent or least frequent words give you important information about the
-# text?
+# text? yes, it can help us figure out what words we need to worry about when reading the book. The punctuation does not help much.
 # Sometimes we need to look deeper
 
 # TASK #10
-print("______________________________________Task #10_________________________________\n")
+print("\n______________________________________Task #10_________________________________\n")
 # Fine grained selection of words
 # Let's look at the length of words to see if that tells us something, starting with the
 # long words
@@ -282,25 +284,25 @@ V = set(text1)
 long_words = [w for w in V if len(w) > 15]
 
 # Now let's look at the set of long_words in text1
-#print(sorted(long_words))
+print("Words with length greater than 15: ",sorted(long_words),'\n')
 
 # YOUR TURN
 # Try out the previous statements to evaluate word length and experiment with changing
 # the text and changing the length condition
 # NOTE: You need to remove the # sign located to the left of the code below for the code
 # to run
-#V_1 = set()
-#long_words = [w for w in V_1 if len(w) > 15]
-
+V_1 = set(text5)
+long_words = [w for w in V_1 if len(w) > 20]
+print("Words with length greater than 20: ",sorted(long_words),'\n')
 
 # TASK #11
-print("______________________________________Task #11_________________________________\n")
+print("\n______________________________________Task #11_________________________________\n")
 # Collocations and Bigrams
 # Let's count bigrams and collocations in text
 # We'll come back to how we find collocations later
-#print(text4.collocations())
+print("\nCollocations in text4",text4.collocations(),'\n')
 
-#print(text5.collocations())
+print("\nCollocations in text5",text5.collocations(),'\n')
 
 # YOUR TURN
 # Use the "collocations" function to search for collocations in other texts.
@@ -308,10 +310,10 @@ print("______________________________________Task #11___________________________
 # Are they good keywords?
 
 # Collocation search 1
-
+print("\nCollocations in text6",text6.collocations(),'\n')
 
 # Collocation search 2
-
+print("\nCollocations in text7",text7.collocations(),'\n')
 
 #END OF LAB #2
 
